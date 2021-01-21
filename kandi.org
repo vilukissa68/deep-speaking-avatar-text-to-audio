@@ -3,14 +3,14 @@
 
 * Prosessi
 
-** Kandi projekti (aihe myöhemmin)
+** Kandi projekti (Deep Speaking Avatar - Text-to-Audio)
 
 ** Kypsyysnäyte
   
 ** TODO Tieteellisen kirjoittamisen kokonaisuus
 
-*** TODO 1. Esitehtävä 
-    DEADLINE: <2021-01-25 Mon>
+*** DONE 1. Esitehtävä 
+    CLOSED: [2021-01-21 Thu 10:20] DEADLINE: <2021-01-25 Mon>
 *** TODO 1. Tapaaminen 
     SCHEDULED: <2021-01-25 Mon>
 *** TODO Kielenhuolto testi 
@@ -30,3 +30,7 @@
 *** TODO Hakusuunnitelma
     DEADLINE: <2021-01-29 Fri>
     
+
+
+* Lähdemateriaalit
+** Lähde
