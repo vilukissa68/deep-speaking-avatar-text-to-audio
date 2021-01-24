@@ -4,6 +4,10 @@
 * Prosessi
 
 ** Kandi projekti (Deep Speaking Avatar - Text-to-Audio)
+   Tiedosto pohjainen rajapinta
+*** TODO Selvitä äänentoiston speksit
+*** TODO Perehdy koodipohjaa
+*** TODO Integraation muuhun projektiin
 
 ** Kypsyysnäyte
   
@@ -25,12 +29,20 @@
 *** TODO Henkilökohtainen ohjaus tapaaminen (Vapaaehtoinen) 
 
 ** TODO Tiedonhankinta harjoitus
+*** DONE Verkkoluento
+    CLOSED: [2021-01-24 Sun 14:03]
+*** DONE Tentti
+    CLOSED: [2021-01-24 Sun 14:05]
 *** TODO Etäopetus
     SCHEDULED: <2021-02-01 Mon>
-*** TODO Hakusuunnitelma
-    DEADLINE: <2021-01-29 Fri>
+*** DONE Hakusuunnitelma
+    CLOSED: [2021-01-24 Sun 14:30] DEADLINE: <2021-01-30 Sat>
     
 
 
 * Lähdemateriaalit
-** Lähde
+** Koodi pohja: [[Koodi pohja githubissa][https://github.com]]
+
+* Muuta
+  Perjantaisin klo 13-16 Joni kampuksella työhuoneessa.
+

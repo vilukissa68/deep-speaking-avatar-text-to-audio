@@ -1,0 +1,3 @@
+Hello World
+This is the text to speech module of
+Deep Speaking Avatar project
