@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+bandmat
+theano
+torch
+importlib

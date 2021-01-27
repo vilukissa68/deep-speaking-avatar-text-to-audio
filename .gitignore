@@ -1,4 +1,6 @@
 texput.log
 README.pdf
 __pycache__
-
+data/
+deepvoice3_pytorch/
+Merlin_GlottDNN_synth/

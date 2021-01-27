@@ -7,7 +7,10 @@
    Tiedosto pohjainen rajapinta
 *** TODO Selvitä äänentoiston speksit
 *** TODO Perehdy koodipohjaa
+*** TODO TTS skripti
 *** TODO Integraation muuhun projektiin
+*** TODO Dependency skriptin tekeminen
+*** TODO Readmen kirjottaminen
 
 ** Kypsyysnäyte
   
@@ -15,15 +18,15 @@
 
 *** DONE 1. Esitehtävä 
     CLOSED: [2021-01-21 Thu 10:20] DEADLINE: <2021-01-25 Mon>
-*** TODO 1. Tapaaminen 
-    SCHEDULED: <2021-01-25 Mon>
+*** DONE 1. Tapaaminen 
+    CLOSED: [2021-01-25 Mon 11:39] SCHEDULED: <2021-01-25 Mon>
 *** TODO Kielenhuolto testi 
 *** TODO 2. Esitehtävä 
-    DEADLINE: <2021-01-27 Wed>
+    DEADLINE: <2021-01-27 Wed
 *** TODO 2. Tapaaminen 
     SCHEDULED: <2021-01-27 Wed>
 *** TODO 3. Tapaaminen (Vertaispalaute)
-    Vähintään 2 sivua valmista kandia
+    Vähintään 2 sivua suomenkielistä tekstiä kandiin liittyen
     
 *** TODO Kandin 1. version palauttaminen kielentarkistukseen
 *** TODO Henkilökohtainen ohjaus tapaaminen (Vapaaehtoinen) 
@@ -41,7 +44,8 @@
 
 
 * Lähdemateriaalit
-** Koodi pohja: [[Koodi pohja githubissa][https://github.com]]
+** Merlin+GlottDNN: [[https://github.com/SPEECHCOG/Merlin_GlottDNN_synth][Github]]
+** Deepvoice: [[https://github.com/r9y9/deepvoice3_pytorch][Github]]
 
 * Muuta
   Perjantaisin klo 13-16 Joni kampuksella työhuoneessa.
