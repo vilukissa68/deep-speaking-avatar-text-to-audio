@@ -111,6 +111,6 @@ def visualize(alignment, spectrogram):
   plt.show()
 
 model = setup()
-text = "I would like to interject for a moment. What you are refering to as Linux, is in fact GNU slash linux. Eat my ass. Hello Mr. Stallman"
+text = "Copypasta can usually be found posted in a discussion about any subject, and will usually be intended to draw out newer users into responding negatively to it, much to the amusement of more veteran users."
 tts(model, text, speaker_id=None ,figures=False)
 print("Done")
