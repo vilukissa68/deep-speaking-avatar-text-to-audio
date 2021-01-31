@@ -9,7 +9,7 @@
    (TeX-run-style-hooks
     "latex2e"
     "tex/johdanto"
-    "tex/esitystyyli"
+    "tex/synthesis"
     "tex/viittaustekniikat"
     "tex/yhteenveto"
     "./tex/liite"
@@ -22,7 +22,7 @@
     '("verbcommand" 1))
    (LaTeX-add-labels
     "ch:johdanto"
-    "ch:esitystyyli"
+    "ch:synthesis"
     "ch:viittaustekniikat"
     "ch:yhteenveto"
     "ch:liite")

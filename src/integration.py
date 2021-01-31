@@ -1,6 +1,8 @@
 """
 This file integrates the text-to-speech module of Deep Speaking Avatar with rest of the project
 """
+from watchdog.observers import Observer
+
 
 ##### Integration definitions
 READLOCATION = "./files/in.txt"
@@ -26,3 +28,7 @@ def write_file(data):
     f.writelines(data)
     f.close()
     return
+
+
+def parse_file(data):
+    approvedCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',' k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']

@@ -186,19 +186,20 @@
 % The type of the thesis (e.g. Kandidaatintyö
 % or Master of Science Thesis) in the primary
 % and the secondary languages of the thesis.
-\thesistype{Opinnäytetyön taso}{Thesis type}
+\thesistype{Bachelors's Thesis}{Kandidaatintyön}
 
 % The faculty and degree programme names in
 % the primary and the secondary languages of
 % the thesis.
-\facultyname{Tiedekunnan nimi}{Faculty Name}
-\programmename{Tutkinto-ohjelma}{Degree Programme}
+\facultyname{Faculty of Inforamtion Technology and Communication
+  Sciences}{Informaatioteknologian ja viestinnän tiedekunta}
+\programmename{Information technology}{Tietotekniikka}
 
 % The keywords to the thesis in the primary and
 % the secondary languages of the thesis
 \keywords%
-    {avainsana, avainsana, avainsana, avainsana, avainsana}
-    {keyword, keyword, keyword, keyword, keyword}
+    {Deep learning, Tacotron, Speech synthesis, avainsana, avainsana}
+    {Syväoppiminen, Tacotron, Puhesynteesi, keyword, keyword}
 
 \maketitle
 
@@ -214,8 +215,8 @@
 % first abstract. The second argument of
 % the \preface command takes the place where
 % the thesis was signed in.
-\abstract{tex/tiivistelma.tex}
-\otherabstract{tex/abstract.tex}
+\abstract{tex/abstract.tex}
+\otherabstract{tex/tiivistelma.tex}
 \preface{tex/alkusanat.tex}{Tampereella}
 
 %%%%% Table of contents.
@@ -250,9 +251,9 @@
 \label{ch:johdanto}
 \input{tex/johdanto.tex}
 
-\chapter{Esitystyyli}
-\label{ch:esitystyyli}
-\input{tex/esitystyyli.tex}
+\chapter{Audio synthesis}
+\label{ch:synthesis}
+\input{tex/synthesis.tex}
 
 \chapter{Viittaustekniikat}
 \label{ch:viittaustekniikat}
@@ -260,7 +261,7 @@
 
 % Add chapters similarly.
 
-\chapter{Yhteenveto}
+\chapter{Conclusions}
 \label{ch:yhteenveto}
 \input{tex/yhteenveto.tex}
 

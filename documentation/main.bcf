@@ -2351,21 +2351,12 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">kirjoitusohje2018</bcf:citekey>
-    <bcf:citekey order="2">tikz</bcf:citekey>
-    <bcf:citekey order="3">pgfplots</bcf:citekey>
-    <bcf:citekey order="4">siunitx</bcf:citekey>
-    <bcf:citekey order="5">pubadvice2009</bcf:citekey>
-    <bcf:citekey order="6">siunitx</bcf:citekey>
-    <bcf:citekey order="7">matohje2009</bcf:citekey>
-    <bcf:citekey order="8">notsoshort</bcf:citekey>
-    <bcf:citekey order="9">listings</bcf:citekey>
-    <bcf:citekey order="9">notsoshort</bcf:citekey>
-    <bcf:citekey order="10">biblatex</bcf:citekey>
-    <bcf:citekey order="11">notsoshort</bcf:citekey>
-    <bcf:citekey order="12">notsoshort</bcf:citekey>
-    <bcf:citekey order="13">notsoshort</bcf:citekey>
-    <bcf:citekey order="14">biblatex</bcf:citekey>
-    <bcf:citekey order="15">bibmanagement</bcf:citekey>
+    <bcf:citekey order="2">biblatex</bcf:citekey>
+    <bcf:citekey order="3">notsoshort</bcf:citekey>
+    <bcf:citekey order="4">notsoshort</bcf:citekey>
+    <bcf:citekey order="5">notsoshort</bcf:citekey>
+    <bcf:citekey order="6">biblatex</bcf:citekey>
+    <bcf:citekey order="7">bibmanagement</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

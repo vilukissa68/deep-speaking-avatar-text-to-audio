@@ -1,5 +1,5 @@
 #+Title: Kandi - Väinö-Waltteri Granat
-#+TODO: TODO WAITING | DONE CANCELED
+#+TODO: TODO WAITING | DONE CANCELED READ READ
 
 * Prosessi
 
@@ -43,10 +43,23 @@
     
 
 
-* Lähdemateriaalit
+* Koodi
 ** Merlin+GlottDNN: [[https://github.com/SPEECHCOG/Merlin_GlottDNN_synth][Github]]
 ** Deepvoice: [[https://github.com/r9y9/deepvoice3_pytorch][Github]]
 
+* Lähdemateriaalit
+** TODO Efficient Neural Audio Synthesis https://arxiv.org/pdf/1802.08435.pdf
+** TODO Tacotron: Towards End-To-End Speech Synthesis: https://arxiv.org/pdf/1703.10135.pdf
+** TODO FastSpeech Fast, Robust and Controllable Text to Speech: https://arxiv.org/pdf/1905.09263.pdf
+   
 * Muuta
   Perjantaisin klo 13-16 Joni kampuksella työhuoneessa.
 
+* Ideoita:
+** TODO Selitä DNN
+** TODO Selitä speech synthesis
+** TODO Selitä vocoder
+** TODO vertaile eri malleja, ainakin Tacotron vs FastSpeech
+** TODO vertaile vocodereita
+** TODO Text normalization challenges: homonyymit ja homograafit, lyhenteet, numerot
+** TODO Text-to-phoneme challeges: dictionary vs rule-based

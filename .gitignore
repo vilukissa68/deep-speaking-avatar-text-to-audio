@@ -1,6 +1,15 @@
 texput.log
 README.pdf
-__pycache__
+__pycache__/
 data/
 deepvoice3_pytorch/
 Merlin_GlottDNN_synth/
+TTS/
+vocoder_model.pth.tar
+tts_model.pth.tar
+scale_stats.npy
+TTS-checkpoint.zip
+tests_audios
+gst-style-example.wav.*
+best_model.pth.tar
+

@@ -5,29 +5,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Esitystyyli}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Audio synthesis}{3}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Teksti}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Deep neutal network}{3}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Kuvat}{3}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Viittaustekniikat}{4}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Taulukot}{4}{section.2.3}%
+\contentsline {section}{\numberline {3.1}Lähdeviittaukset tekstissä}{4}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Matemaattiset merkinnät ja yhtälöt}{6}{section.2.4}%
+\contentsline {section}{\numberline {3.2}Lähdeluettelo}{5}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Ohjelmat ja algoritmit}{7}{section.2.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Viittaustekniikat}{8}{chapter.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Lähdeviittaukset tekstissä}{8}{section.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Lähdeluettelo}{9}{section.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Yhteenveto}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Conclusions}{7}{chapter.4}%
 \defcounter {refsection}{0}\relax 
 \ttl@change@i {\@ne }{chapter}{0pt}{}{\@appendixname ~\thecontentslabel :~}{}{\titlerule *[1pc]{.}\contentspage }\relax 
 \defcounter {refsection}{0}\relax 
 \ttl@change@v {chapter}{}{}{}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Esimerkkiliite}{12}{chapter.1}%
+\contentsline {chapter}{\numberline {A}Esimerkkiliite}{8}{chapter.1}%
 \contentsfinish 
