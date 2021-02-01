@@ -12,4 +12,4 @@ TTS-checkpoint.zip
 tests_audios
 gst-style-example.wav.*
 best_model.pth.tar
-
+src/speakers.json
