@@ -1,9 +1,9 @@
 # Fdb version 3
-["biber main"] 1612087931 "main.bcf" "main.bbl" "main" 1612087931
-  "main.bcf" 1611762111 107022 e1670c998946fd8c9b4af448cc42f456 "pdflatex"
+["biber main"] 1612354145 "main.bcf" "main.bbl" "main" 1612354145
+  "main.bcf" 1612354135 106257 7fc357463cfbef2afa42dec35d2fa12c "pdflatex"
   (generated)
-  "main.bbl"
   "main.blg"
+  "main.bbl"
 ["pdflatex"] 1611594862 "main.tex" "main.pdf" "main" 1611594862
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1607249373 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1607249373 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -240,13 +240,13 @@
   "tex/viittaustekniikat.tex" 1611209388 6098 a659707ea3d203b18cd5f89e47efc6e6 ""
   "tex/yhteenveto.tex" 1611209388 2017 3c0e0f9aa845df9b435f94bce54604da ""
   (generated)
-  "main.log"
-  "pdfa.xmpi"
-  "main.glo"
   "main.run.xml"
-  "main.aux"
-  "main.ist"
-  "main.toc"
-  "main.bcf"
   "main.out"
+  "main.bcf"
+  "main.ist"
+  "main.glo"
+  "main.aux"
+  "pdfa.xmpi"
+  "main.log"
+  "main.toc"
   "main.pdf"

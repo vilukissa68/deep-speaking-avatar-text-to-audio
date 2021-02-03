@@ -1,0 +1,163 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{SchroederManfredR1993Abho}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bf526663310b9f989a01b43db3e1e429}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={Manfred\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V}%
+      }
+      \strng{namehash}{bf526663310b9f989a01b43db3e1e429}
+      \strng{fullhash}{bf526663310b9f989a01b43db3e1e429}
+      \strng{bibnamehash}{bf526663310b9f989a01b43db3e1e429}
+      \strng{authorbibnamehash}{bf526663310b9f989a01b43db3e1e429}
+      \strng{authornamehash}{bf526663310b9f989a01b43db3e1e429}
+      \strng{authorfullhash}{bf526663310b9f989a01b43db3e1e429}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper retraces, in an informal way, some of the history of speech synthesis and speech research from Von Kempelen's speaking machine to linear prediction. Diese Arbeit ist ein informeller Abriss der Geschichte der Sprachsynthese und Sprachforschung, beginnend mit Von Kempelens Sprechmaschine bis zur linearen Prädiktion. Cet article présente, d'une manière informelle, l'historie de la recherche sur la synthèse de la parole depuis la machine à parler de Von Kempelen jusqu'à la prédiction linéaire.}
+      \field{issn}{0167-6393}
+      \field{journaltitle}{Speech Communication}
+      \field{number}{1}
+      \field{title}{A brief history of synthetic speech}
+      \field{volume}{13}
+      \field{year}{1993}
+      \field{pages}{231\bibrangedash 237}
+      \range{pages}{7}
+      \keyw{recognition ; history ; Speech synthesis ; speech compression ; linear prediction ; Applied sciences ; Speech and sound recognition and synthesis. Linguistics ; Artificial intelligence ; Exact sciences and technology ; Computer science; control theory; systems}
+    \endentry
+    \entry{shen2018natural}{misc}{}
+      \name{author}{13}{}{%
+        {{un=0,uniquepart=base,hash=7f1a9ef81d98cf013191d02e3e5c98ce}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79b11327e6066baac1563390e41c13f2}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Ruoming},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79806915dad52902a35bf2249c791110}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Ron\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29ea22df63f174ac629e9ef100b40484}{%
+           family={Schuster},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a9f30e0c0441d2aea255916ff375e8c}{%
+           family={Jaitly},
+           familyi={J\bibinitperiod},
+           given={Navdeep},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cebeff55132aa441f26afb504ef6a29}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zongheng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0d10aaf985cebf8d0497e1828f9313f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhifeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc399f85ccdd18f7c16d2cd99a42d132}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yuxuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12dfe1f59c012973b161655e19ed9754}{%
+           family={Skerry-Ryan},
+           familyi={S\bibinithyphendelim R\bibinitperiod},
+           given={RJ},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7195887e1fff23cbe4d4606880c8f0da}{%
+           family={Saurous},
+           familyi={S\bibinitperiod},
+           given={Rif\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba97da1b498d9addeebed6465a90f567}{%
+           family={Agiomyrgiannakis},
+           familyi={A\bibinitperiod},
+           given={Yannis},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fc7a40d6072b1bb1d4e56d14ef88e2f}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yonghui},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8d4617b05e2f79838cb66a3e3cb5d42a}
+      \strng{fullhash}{6ef17f2a9192d257352423e822cee667}
+      \strng{bibnamehash}{6ef17f2a9192d257352423e822cee667}
+      \strng{authorbibnamehash}{6ef17f2a9192d257352423e822cee667}
+      \strng{authornamehash}{8d4617b05e2f79838cb66a3e3cb5d42a}
+      \strng{authorfullhash}{6ef17f2a9192d257352423e822cee667}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1712.05884
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -51,6 +51,7 @@
 ** TODO Efficient Neural Audio Synthesis https://arxiv.org/pdf/1802.08435.pdf
 ** TODO Tacotron: Towards End-To-End Speech Synthesis: https://arxiv.org/pdf/1703.10135.pdf
 ** TODO FastSpeech Fast, Robust and Controllable Text to Speech: https://arxiv.org/pdf/1905.09263.pdf
+** TODO History of speech synthesis: http://research.spa.aalto.fi/publications/theses/lemmetty_mst/chap2.html
    
 * Muuta
   Perjantaisin klo 13-16 Joni kampuksella työhuoneessa.
@@ -63,3 +64,4 @@
 ** TODO vertaile vocodereita
 ** TODO Text normalization challenges: homonyymit ja homograafit, lyhenteet, numerot
 ** TODO Text-to-phoneme challeges: dictionary vs rule-based
+** TODO Mel spectograms vs linear spectrograms
