@@ -20,9 +20,10 @@
     CLOSED: [2021-01-21 Thu 10:20] DEADLINE: <2021-01-25 Mon>
 *** DONE 1. Tapaaminen 
     CLOSED: [2021-01-25 Mon 11:39] SCHEDULED: <2021-01-25 Mon>
-*** TODO Kielenhuolto testi 
-*** TODO 2. Esitehtävä 
-    DEADLINE: <2021-01-27 Wed
+*** DONE Kielenhuolto testi 
+    CLOSED: [2021-02-05 Fri 16:43]
+*** DONE 2. Esitehtävä 
+    CLOSED: [2021-02-05 Fri 16:43] DEADLINE: <2021-01-27 Wed
 *** TODO 2. Tapaaminen 
     SCHEDULED: <2021-01-27 Wed>
 *** TODO 3. Tapaaminen (Vertaispalaute)
@@ -36,8 +37,8 @@
     CLOSED: [2021-01-24 Sun 14:03]
 *** DONE Tentti
     CLOSED: [2021-01-24 Sun 14:05]
-*** TODO Etäopetus
-    SCHEDULED: <2021-02-01 Mon>
+*** DONE Etäopetus
+    CLOSED: [2021-02-05 Fri 16:43] SCHEDULED: <2021-02-01 Mon>
 *** DONE Hakusuunnitelma
     CLOSED: [2021-01-24 Sun 14:30] DEADLINE: <2021-01-30 Sat>
     
