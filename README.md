@@ -10,21 +10,30 @@ make clean
 ```
 
 ## Dependencies
-### Python dependencies
-Python dependencies can be installed by running
+
+Synthesizer only tested to work on python 3.8. To install python 3.8 it's recommended to use conda virtual enviroment.
+
 ```bash
-pip install dependencies.txt
-pip install theano
+sudo apt-get install espeak
 ```
 
-### C++ dependencies
-This project uses [[https://github.com/SPEECHCOG/Merlin_GlottDNN_synth][Merlin_GlottDNN_synth]] for the neural network and it has some C++ dependencies. To install these dependencies on Arch Linux run this command: 
+### Espeak
+Espeak is needed for the audio synthesis. It can be installed as a binary on debian based distros via:
+
 ```bash
-pacman -S gsl libsndfile libconfig
+sudo apt-get install espeak
+```
+For non-debian based distributions your package manager might or might not have epseak.
+
+## Usage
+First run 'setup_multispeech.sh' to get all the needed dependencies to run the synthesizer
+
+```bash
+./src/setup_multivoice.sh
 ```
 
-## Compiling
-Some parts of the Merlin+GlottDNN need to be compile before use:
+After the environment is setup the synthesizer can be run with: 
 ```bash
-./src/Merlin_GlottDNN_synth/tools/compile_other_speech_tools.sh
+python3.8 src/multivoice.py
 ```
+
