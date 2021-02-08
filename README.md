@@ -1,21 +1,9 @@
 # Deep Speaking Avatar - Text-to-Audio
 This project is part of Deep Speaking Avatar project (link here)
 
-
-## Building the documentation
-```bash
-cd documentation
-make all
-make clean
-```
-
 ## Dependencies
 
 Synthesizer only tested to work on python 3.8. To install python 3.8 it's recommended to use conda virtual enviroment.
-
-```bash
-sudo apt-get install espeak
-```
 
 ### Espeak
 Espeak is needed for the audio synthesis. It can be installed as a binary on debian based distros via:
