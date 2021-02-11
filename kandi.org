@@ -6,10 +6,13 @@
 ** Kandi projekti (Deep Speaking Avatar - Text-to-Audio)
    Tiedosto pohjainen rajapinta
 *** TODO Selvitä äänentoiston speksit
-*** TODO Perehdy koodipohjaa
-*** TODO TTS skripti
+*** DONE Perehdy koodipohjaa
+    CLOSED: [2021-02-11 Thu 14:42]
+*** DONE TTS skripti
+    CLOSED: [2021-02-11 Thu 14:42]
 *** TODO Integraation muuhun projektiin
-*** TODO Dependency skriptin tekeminen
+*** DONE Dependency skriptin tekeminen
+    CLOSED: [2021-02-11 Thu 14:42]
 *** TODO Readmen kirjottaminen
 
 ** Kypsyysnäyte
@@ -24,8 +27,8 @@
     CLOSED: [2021-02-05 Fri 16:43]
 *** DONE 2. Esitehtävä 
     CLOSED: [2021-02-05 Fri 16:43] DEADLINE: <2021-01-27 Wed
-*** TODO 2. Tapaaminen 
-    SCHEDULED: <2021-01-27 Wed>
+*** DONE 2. Tapaaminen 
+    CLOSED: [2021-02-11 Thu 14:42] SCHEDULED: <2021-01-27 Wed>
 *** TODO 3. Tapaaminen (Vertaispalaute)
     Vähintään 2 sivua suomenkielistä tekstiä kandiin liittyen
     
@@ -61,11 +64,12 @@
    
 
 * Lähdemateriaalit
-** TODO Efficient Neural Audio Synthesis https://arxiv.org/pdf/1802.08435.pdf
-** TODO Tacotron: Towards End-To-End Speech Synthesis: https://arxiv.org/pdf/1703.10135.pdf
-** TODO FastSpeech Fast, Robust and Controllable Text to Speech: https://arxiv.org/pdf/1905.09263.pdf
-** TODO History of speech synthesis: http://research.spa.aalto.fi/publications/theses/lemmetty_mst/chap2.html
-** TODO Tacotron2: https://arxiv.org/pdf/1712.05884.pdf
+** Efficient Neural Audio Synthesis https://arxiv.org/pdf/1802.08435.pdf
+** Tacotron: Towards End-To-End Speech Synthesis: https://arxiv.org/pdf/1703.10135.pdf
+** FastSpeech Fast, Robust and Controllable Text to Speech: https://arxiv.org/pdf/1905.09263.pdf
+** History of speech synthesis: http://research.spa.aalto.fi/publications/theses/lemmetty_mst/chap2.html
+** Tacotron2: https://arxiv.org/pdf/1712.05884.pdf
+** Kokoelma   https://github.com/zzw922cn/awesome-speech-recognition-speech-synthesis-papers#Speech-Synthesis
    
 * Muuta
   Perjantaisin klo 13-16 Joni kampuksella työhuoneessa.
@@ -79,3 +83,41 @@
 ** TODO Text normalization challenges: homonyymit ja homograafit, lyhenteet, numerot
 ** TODO Text-to-phoneme challeges: dictionary vs rule-based
 ** TODO Mel spectograms vs linear spectrograms
+
+
+* Configuraatioiden vertailua:
+** LJSpeech + WaveRNN + TTS
+*** + Hyvä ääni (nais ääni)
+*** - Hidas (n. 20s)
+** LJSpeech + MultiBandMelGan + Tacotron2 using PyTorch
+*** + Nopea (n. 3s)
+*** - Rakeinen ääni (nais ääni)
+** LJSpeech + MultiBandMelGan + Tacotron2 using Tensorflow
+*** + Nopea (n. 3s)
+*** + Ok ääni (nais ääni)
+** Multi-Speaker TTS with Speaker Encoder
+*** + Multivoice
+*** + Nopea
+*** - Huono ääni
+** Multi-Speaker TTS with GST
+*** + Multivoice
+*** + GST
+*** + Nopea
+*** - Kohtalaisen huono ääni ilman configuraatiota
+** LJSpeech + Universal FullBand-MelGAN + GlowTTS
+*** + Nopea
+*** + Hyvä ääni (nais ääni)
+*** + Configuroitavuus
+*** - Ongelmia joidenkin sanojen kanssa
+** Multi-Speaker TTS - VCTK +  WaveGrad + TacotronDDC
+*** - Huono ääni 
+*** - Monimutkainen
+*** - Hidas
+** LJSpeech - Tacotron2 with Dynamic Convolutional Attention and Universal Fullband-MelGAN
+*** + Nopea 
+*** + Kohtalainen ääni (Nais ääni)
+*** - Hieman ongelmia modelin kanssa (epäselviä sanoja)
+** LJSpeech - Glow-TTS - MultiBand-MelGAN
+*** + Todella Nopea 
+*** + Hyvä ääni (nais ääni)
+    
