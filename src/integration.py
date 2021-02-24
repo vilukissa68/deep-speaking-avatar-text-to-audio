@@ -38,8 +38,7 @@ def parse_line(line):
     for char in line:
         if char in approvedCharacters:
             returnString+=str(char)
-    returnString = str.strip(returnString)
-    return returnString
+    return returnString.strip()
 
 
 def check_file():
@@ -53,7 +52,6 @@ def check_file():
         for sentence in sentences:
             if sentence != "":
                 parsed_lines.append(parse_line(sentence))
-
     ## Clear the file
     write_file("")
-    return parsed_lines
+    return list(filter(parsed_lines))
