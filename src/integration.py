@@ -6,7 +6,7 @@ from watchdog.observers import Observer
 
 
 ##### Integration definitions
-READLOCATION = "./files/in.txt"
+READLOCATION = "/home/avatar/output.txt"
 WRITELOCATION = "./files/out.txt"
 
 
@@ -50,5 +50,5 @@ def check_file():
         parsed_lines.append(parse_line(line))
 
     ## Clear the file
-##    write_file("")
+    write_file("")
     return parsed_lines
