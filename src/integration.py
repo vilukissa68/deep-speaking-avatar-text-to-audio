@@ -54,4 +54,4 @@ def check_file():
                 parsed_lines.append(parse_line(sentence))
     ## Clear the file
     write_file("")
-    return list(filter(parsed_lines))
+    return list(filter(bool, parsed_lines))
