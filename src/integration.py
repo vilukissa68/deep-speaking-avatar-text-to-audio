@@ -38,6 +38,7 @@ def parse_line(line):
     for char in line:
         if char in approvedCharacters:
             returnString+=str(char)
+    returnString = str.strip(returnString)
     return returnString
 
 
