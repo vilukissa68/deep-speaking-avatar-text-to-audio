@@ -33,7 +33,7 @@ def write_file(data):
 
 
 def parse_line(line):
-    approvedCharacters = string.ascii_uppercase + string.ascii_lowercase + " " + "."
+    approvedCharacters = string.ascii_uppercase + string.ascii_lowercase + " " + "." + "?" + "!", "1", "2", "3", "4", "5", "6", "6", "7", "8", "9", "0"
     returnString = ""
     for char in line:
         if char in approvedCharacters:
