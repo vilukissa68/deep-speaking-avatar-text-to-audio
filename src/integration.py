@@ -7,7 +7,7 @@ from watchdog.observers import Observer
 
 
 ##### Integration definitions
-READLOCATION = "/home/avatar/output.txt"
+READLOCATION = "/home/avatar/integration/text-out.txt"
 WRITELOCATION = "./files/out.txt"
 
 
