@@ -2,6 +2,7 @@
 This file integrates the text-to-speech module of Deep Speaking Avatar with rest of the project
 """
 import string
+import re
 from watchdog.observers import Observer
 
 
@@ -47,7 +48,9 @@ def check_file():
         return []
     parsed_lines = []
     for line in lines:
-        parsed_lines.append(parse_line(line))
+        sentences = re.split(r'.|?|,|!', line)
+        for sentence in sentences:
+            parsed_lines.append(parse_line(sentence))
 
     ## Clear the file
     write_file("")
