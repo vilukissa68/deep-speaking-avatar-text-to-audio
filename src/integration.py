@@ -48,9 +48,10 @@ def check_file():
         return []
     parsed_lines = []
     for line in lines:
-        sentences = re.split(r'.|?|,|!', line)
+        sentences = re.split(r'(.+?[.?,!])', line)
         for sentence in sentences:
-            parsed_lines.append(parse_line(sentence))
+            if sentence != "":
+                parsed_lines.append(parse_line(sentence))
 
     ## Clear the file
     write_file("")
