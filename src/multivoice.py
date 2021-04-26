@@ -24,7 +24,7 @@ from TTS.vocoder.utils.generic_utils import setup_generator
 
 
 SPEAKER_JSON = 'speakers.json'
-def setup():
+def setup(USE_CUDA):
     TEXT = ''
     OUT_PATH = 'tests-audios/'
     # create output path
@@ -32,16 +32,13 @@ def setup():
 
     SPEAKER_FILEID = None # if None use the first embedding from speakers.json
 
-    # model vars 
+    # model vars
     MODEL_PATH = 'best_model.pth.tar'
     CONFIG_PATH = 'config.json'
 
     # vocoder vars
     VOCODER_PATH = ''
     VOCODER_CONFIG_PATH = ''
-
-    USE_CUDA = True
-
 
     # load the config
     C = load_config(CONFIG_PATH)
@@ -95,7 +92,6 @@ def setup():
     else:
         vocoder_model = None
         VC = None
-
     # synthesize voice
     use_griffin_lim = VOCODER_PATH== ""
 
@@ -107,16 +103,18 @@ def setup():
     else:
         SPEAKER_FILEID = None
 
-    return model, vocoder_model, C, USE_CUDA, ap, SPEAKER_FILEID, speaker_embedding
+    print("Using vocoder:", vocoder_model)
+    return model, vocoder_model, C, ap, SPEAKER_FILEID, speaker_embedding
 
-def tts(model, vocoder_model, text, CONFIG, use_cuda, ap, use_gl, speaker_fileid, speaker_embedding=None, gst_style=None):
+
+def tts(model, vocoder_model, text, CONFIG, USE_CUDA, ap, use_gl, speaker_fileid, speaker_embedding=None, gst_style=None):
     t_1 = time.time()
-    waveform, _, _, mel_postnet_spec, _, _ = synthesis(model, text, CONFIG, use_cuda, ap, speaker_fileid, gst_style, False, CONFIG.enable_eos_bos_chars, use_gl, speaker_embedding=speaker_embedding)
+    waveform, _, _, mel_postnet_spec, _, _ = synthesis(model, text, CONFIG, USE_CUDA, ap, speaker_fileid, gst_style, False, CONFIG.enable_eos_bos_chars, use_gl, speaker_embedding=speaker_embedding)
     if CONFIG.model == "Tacotron" and not use_gl:
         mel_postnet_spec = ap.out_linear_to_mel(mel_postnet_spec.T).T
     if not use_gl:
         waveform = vocoder_model.inference(torch.FloatTensor(mel_postnet_spec.T).unsqueeze(0))
-    if use_cuda and not use_gl:
+    if USE_CUDA and not use_gl:
         waveform = waveform.cpu()
     if not use_gl:
         waveform = waveform.numpy()
@@ -129,9 +127,7 @@ def tts(model, vocoder_model, text, CONFIG, use_cuda, ap, use_gl, speaker_fileid
     return waveform
 
 
-model, vocoder_model, CONFIG, use_cuda, ap, speaker_fileid, speaker_embedding = setup()
-
-def getSpeaker(choice=4):
+def getSpeaker(CONFIG, choice=4):
     # VCTK speakers not seen in training (new speakers)
     VCTK_test_Speakers = ["p225", "p234", "p238", "p245", "p248", "p261", "p294", "p302", "p326", "p335", "p347"]
 

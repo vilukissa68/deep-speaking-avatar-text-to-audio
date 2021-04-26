@@ -1,19 +1,68 @@
 import sounddevice as sd
-import integration
+import soundfile as sf
+import sys
 import time
+import multivoice
+import integration
 
+
+USE_CUDA = True
 MULTI = True
-if MULTI:
-    import multivoice
-else:
-    import synthesizer
+SPEAKER = 26
+READLOCATION = "/home/vaino/sound.txt"
+WRITELOCATION = "/home/vaino/sound.wav"
+POLLINGRATE = 10 # Times polled in one second
+WRITETOFILE = False
 
+
+def setup(args):
+    if("--cuda" in args):
+        global USE_CUDA
+        USE_CUDA = True
+
+    if("--speaker" in args):
+        i = args.index("--speaker")
+        if(i+1 < len(args)):
+            global SPEAKER
+            SPEAKER = int(args[i + 1])
+        else:
+            print("Please give speaker number after argument")
+            return
+    if("--polling-rate" in args):
+        i = args.index("--polling-rate")
+        if(i+1 < len(args)):
+            global POLLINGRATE
+            POLLINGRATE = args[i+1]
+
+    if("--write-to-file" in args):
+        global WRITETOFILE
+        WRITETOFILE = True
+
+    if("-w" in args):
+        i = args.index("-w")
+        if(i+1 < len(args)):
+            global WRITELOCATION
+            WRITELOCATION = args[i+1]
+            print("WRITE LOCATION SET", WRITELOCATION)
+
+    if("-r" in args):
+        i = args.index("-r")
+        if(i+1 < len(args)):
+            global READLOCATION
+            READLOCATION = args[i+1]
+
+    if("--single" in args):
+        MULTI = False
+        import synthesizer
+    else:
+        print("Import multivoice")
+        MULTI = True
 
 
 def loop():
     if MULTI:
-        model, vocoder_model, CONFIG, use_cuda, ap, speaker_fileid, speaker_embedding = multivoice.setup() # Load module
-        speaker_embedding = multivoice.getSpeaker(26) # Set speaker
+        model, vocoder_model, CONFIG, ap, speaker_fileid, speaker_embedding = multivoice.setup(USE_CUDA) # Load module
+        speaker_embedding = multivoice.getSpeaker(CONFIG, choice=SPEAKER) # Set speaker
         # 0: Word pauses
         # 1: Word start timing?
         # 2: ???
@@ -24,7 +73,7 @@ def loop():
         model, vocoder_model, speaker_id, CONFIG, use_cuda, ap = synthesizer.setup()
     while True:
         # sentence = input("Tell me something:")
-        lines = integration.check_file() 
+        lines = integration.check_file(READLOCATION)
         if len(lines) > 0:
             for sentence in lines:
                 if sentence == "q":
@@ -36,7 +85,7 @@ def loop():
                                         vocoder_model,
                                         sentence,
                                         CONFIG,
-                                        use_cuda,
+                                        USE_CUDA,
                                         ap,
                                         True,
                                         speaker_fileid,
@@ -48,16 +97,17 @@ def loop():
                                                             vocoder_model,
                                                             speaker_id,
                                                             CONFIG,
-                                                            use_cuda,
+                                                            USE_CUDA,
                                                             ap,
                                                             use_gl=False,
                                                             figures=True)
                 sd.play(wav, 22050)
+                if(WRITETOFILE):
+                    sf.write(WRITELOCATION, wav, 22050)
                 sd.wait()
         else:
-            print("Waiting for changes in file files/in.txt")
-            time.sleep(1)
-            
-        
+            print("Waiting for changes in file", READLOCATION)
+            time.sleep(1/POLLINGRATE)
 
+setup(sys.argv)
 loop()

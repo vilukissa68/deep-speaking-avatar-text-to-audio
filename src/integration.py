@@ -3,21 +3,14 @@ This file integrates the text-to-speech module of Deep Speaking Avatar with rest
 """
 import string
 import re
-from watchdog.observers import Observer
-
-
-##### Integration definitions
-READLOCATION = "/home/avatar/integration/text-out.txt"
-WRITELOCATION = "./files/out.txt"
-
 
 
 """
 Read input file and convert data to
 right form.
 """
-def read_file():
-    f = open(READLOCATION, "r")
+def read_file(read_location):
+    f = open(read_location, "r")
     lines = f.readlines()
     return lines
 
@@ -25,8 +18,8 @@ def read_file():
 """
 Write sounddata to file for next module to use.
 """
-def write_file(data):
-    f = open(READLOCATION, "w")
+def write_file(data, write_location):
+    f = open(write_location, "w")
     f.writelines(data)
     f.close()
     return
@@ -41,8 +34,8 @@ def parse_line(line):
     return returnString.strip()
 
 
-def check_file():
-    lines = read_file()
+def check_file(read_location):
+    lines = read_file(read_location)
     print("Lines", lines)
     if (len(lines) < 1):
         return []
@@ -53,5 +46,5 @@ def check_file():
             if sentence != "":
                 parsed_lines.append(parse_line(sentence))
     ## Clear the file
-    write_file("")
+    write_file("", read_location)
     return list(filter(bool, parsed_lines))
