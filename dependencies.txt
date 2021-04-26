@@ -5,3 +5,4 @@ bandmat
 theano
 torch
 importlib
+sounddevice
