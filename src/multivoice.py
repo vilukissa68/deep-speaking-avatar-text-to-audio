@@ -23,6 +23,17 @@ from TTS.utils.io import load_config
 from TTS.vocoder.utils.generic_utils import setup_generator
 
 
+
+# VCTK speakers not seen in training (new speakers)
+VCTK_test_Speakers = ["p225", "p234", "p238", "p245", "p248", "p261", "p294", "p302", "p326", "p335", "p347"]
+
+# VCTK speakers seen in training
+VCTK_train_Speakers = ['p244', 'p300', 'p303', 'p273', 'p292', 'p252', 'p254', 'p269', 'p345', 'p274', 'p363', 'p285', 'p351', 'p361', 'p295', 'p266', 'p307', 'p230', 'p339', 'p253', 'p310', 'p241', 'p256', 'p323', 'p237', 'p229', 'p298', 'p336', 'p276', 'p305', 'p255', 'p278', 'p299', 'p265', 'p267', 'p280', 'p260', 'p272', 'p262', 'p334', 'p283', 'p247', 'p246', 'p374', 'p297', 'p249', 'p250', 'p304', 'p240', 'p236', 'p312', 'p286', 'p263', 'p258', 'p313', 'p376', 'p279', 'p340', 'p362', 'p284', 'p231', 'p308', 'p277', 'p275', 'p333', 'p314', 'p330', 'p264', 'p226', 'p288', 'p343', 'p239', 'p232', 'p268', 'p270', 'p329', 'p227', 'p271', 'p228', 'p311', 'p301', 'p293', 'p364', 'p251', 'p317', 'p360', 'p281', 'p243', 'p287', 'p233', 'p259', 'p316', 'p257', 'p282', 'p306', 'p341', 'p318']
+
+
+
+
+
 SPEAKER_JSON = 'speakers.json'
 def setup(USE_CUDA):
     TEXT = ''
@@ -128,12 +139,6 @@ def tts(model, vocoder_model, text, CONFIG, USE_CUDA, ap, use_gl, speaker_fileid
 
 
 def getSpeaker(CONFIG, choice=4):
-    # VCTK speakers not seen in training (new speakers)
-    VCTK_test_Speakers = ["p225", "p234", "p238", "p245", "p248", "p261", "p294", "p302", "p326", "p335", "p347"]
-
-    # VCTK speakers seen in training
-    VCTK_train_Speakers = ['p244', 'p300', 'p303', 'p273', 'p292', 'p252', 'p254', 'p269', 'p345', 'p274', 'p363', 'p285', 'p351', 'p361', 'p295', 'p266', 'p307', 'p230', 'p339', 'p253', 'p310', 'p241', 'p256', 'p323', 'p237', 'p229', 'p298', 'p336', 'p276', 'p305', 'p255', 'p278', 'p299', 'p265', 'p267', 'p280', 'p260', 'p272', 'p262', 'p334', 'p283', 'p247', 'p246', 'p374', 'p297', 'p249', 'p250', 'p304', 'p240', 'p236', 'p312', 'p286', 'p263', 'p258', 'p313', 'p376', 'p279', 'p340', 'p362', 'p284', 'p231', 'p308', 'p277', 'p275', 'p333', 'p314', 'p330', 'p264', 'p226', 'p288', 'p343', 'p239', 'p232', 'p268', 'p270', 'p329', 'p227', 'p271', 'p228', 'p311', 'p301', 'p293', 'p364', 'p251', 'p317', 'p360', 'p281', 'p243', 'p287', 'p233', 'p259', 'p316', 'p257', 'p282', 'p306', 'p341', 'p318']
-
 
     num_samples_speaker = 1 # In theory the more samples of the speaker the more similar to the real voice it will be!
     # get embedding
@@ -150,12 +155,11 @@ def getSpeaker(CONFIG, choice=4):
             # takes the average of the embedings samples of the announcers
             speaker_embedding = np.mean(np.array(speaker_embeddings), axis=0).tolist()
     return speaker_embeddings
-"""
-gst_style = {"0": -0.5, "1": 0.5, "3": 0, "4": 0}
 
-sentence = "All human beings are born free and equal in dignity and rights. The are endowed with reason and conscience and should act towards one another in spirit of brotherhood."
-wav = tts(model, vocoder_model, sentence, CONFIG, use_cuda, ap, True, speaker_fileid, speaker_embedding, gst_style=None)
-sd.play(wav, 22050)
-sd.wait()
 
-"""
+def listSpeakers():
+    print("VCTK Training Speakers:", VCTK_train_Speakers)
+    print("Number of speakers:", len(VCTK_train_Speakers))
+
+def getNumberOfSpeakers():
+    return len(VCTK_train_Speakers)

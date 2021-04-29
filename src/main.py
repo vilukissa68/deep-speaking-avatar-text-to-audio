@@ -6,7 +6,7 @@ import multivoice
 import integration
 
 
-USE_CUDA = True
+USE_CUDA = False
 MULTI = True
 SPEAKER = 26
 READLOCATION = "/home/vaino/sound.txt"
@@ -24,12 +24,19 @@ def setup(args):
 
     if("--speaker" in args):
         i = args.index("--speaker")
+        number_of_speakers = multivoice.getNumberOfSpeakers()
         if(i+1 < len(args)):
-            global SPEAKER
-            SPEAKER = int(args[i + 1])
+            tmp = int(args[i + 1])
+            if ((tmp < number_of_speakers) and (tmp > 0)):
+                global SPEAKER
+                SPEAKER = tmp
+            else:
+                print("Invalid speaker, defaulting to 1")
+                SPEAKER = 1
         else:
             print("Please give speaker number after argument")
-            return
+            return 0
+
     if("--polling-rate" in args):
         i = args.index("--polling-rate")
         if(i+1 < len(args)):
@@ -45,9 +52,8 @@ def setup(args):
         if(i+1 < len(args)):
             global WRITELOCATION
             WRITELOCATION = args[i+1]
-            print("WRITE LOCATION SET", WRITELOCATION)
 
-            if("-r" in args):
+    if("-r" in args):
         i = args.index("-r")
         if(i+1 < len(args)):
             global READLOCATION
@@ -57,9 +63,12 @@ def setup(args):
         MULTI = False
         import synthesizer
     else:
-        print("Import multivoice")
         MULTI = True
 
+    if("--list-speakers" in args):
+        multivoice.listSpeakers()
+        return 0
+    return 1
 
 def loop():
     integration.write_file("0", FLAGFILE) # Create flagfile
@@ -114,5 +123,8 @@ def loop():
             print("Waiting for changes in file", READLOCATION)
             time.sleep(1/POLLINGRATE)
 
-setup(sys.argv)
-loop()
+
+# State variable can be used to prevent the module from starting
+state = setup(sys.argv)
+if (state):
+    loop()
