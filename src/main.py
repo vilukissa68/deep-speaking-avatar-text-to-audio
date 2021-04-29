@@ -11,7 +11,9 @@ MULTI = True
 SPEAKER = 26
 READLOCATION = "/home/vaino/sound.txt"
 WRITELOCATION = "/home/vaino/sound.wav"
+FLAGFILE = "/home/vaino/speaking.txt" # Other modules read this file to know if avatar is speaking
 POLLINGRATE = 10 # Times polled in one second
+SPEAKINGFLAG = False
 WRITETOFILE = False
 
 
@@ -45,7 +47,7 @@ def setup(args):
             WRITELOCATION = args[i+1]
             print("WRITE LOCATION SET", WRITELOCATION)
 
-    if("-r" in args):
+            if("-r" in args):
         i = args.index("-r")
         if(i+1 < len(args)):
             global READLOCATION
@@ -60,6 +62,7 @@ def setup(args):
 
 
 def loop():
+    integration.write_file("0", FLAGFILE) # Create flagfile
     if MULTI:
         model, vocoder_model, CONFIG, ap, speaker_fileid, speaker_embedding = multivoice.setup(USE_CUDA) # Load module
         speaker_embedding = multivoice.getSpeaker(CONFIG, choice=SPEAKER) # Set speaker
@@ -101,10 +104,12 @@ def loop():
                                                             ap,
                                                             use_gl=False,
                                                             figures=True)
+                integration.write_file("1", FLAGFILE)
                 sd.play(wav, 22050)
                 if(WRITETOFILE):
                     sf.write(WRITELOCATION, wav, 22050)
                 sd.wait()
+                integration.write_file("0", FLAGFILE)
         else:
             print("Waiting for changes in file", READLOCATION)
             time.sleep(1/POLLINGRATE)
