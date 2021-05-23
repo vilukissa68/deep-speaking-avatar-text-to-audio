@@ -2,7 +2,9 @@
 This file integrates the text-to-speech module of Deep Speaking Avatar with rest of the project
 """
 import string
+import os.path
 import re
+import soundfile as sf
 
 
 """
@@ -24,6 +26,20 @@ def write_file(data, write_location):
     f.close()
     return
 
+def write_soundfile(data, write_location, fs):
+    # Prevent file overwriting
+    index = 1
+    while(os.path.isfile(write_location)):
+        i = str(index)
+        # Remove .wav
+        write_location = write_location[:len(write_location) - 4]
+        # Remove possible index number
+        if(index > 1):
+            write_location = write_location[:len(write_location) - len(i)]
+        write_location = write_location + i + ".wav"
+        index = index + 1
+    sf.write(write_location, data, fs)
+    return
 
 def parse_line(line):
     approvedCharacters = string.ascii_uppercase + string.ascii_lowercase + " " + "." + "?" + "!" + "1" + "2" + "3" + "4" + "5" + "6" + "6" + "7" + "8" + "9" + "0"

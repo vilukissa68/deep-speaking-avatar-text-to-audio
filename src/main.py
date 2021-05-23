@@ -92,6 +92,7 @@ def loop():
                     return
 
                 if MULTI:
+                    print("speaker:", multivoice.getSpeakerId(SPEAKER), "gst:", gst_style)
                     wav = multivoice.tts(model,
 
                                         vocoder_model,
@@ -116,7 +117,7 @@ def loop():
                 integration.write_file("1", FLAGFILE)
                 sd.play(wav, 22050)
                 if(WRITETOFILE):
-                    sf.write(WRITELOCATION, wav, 22050)
+                    integration.write_soundfile(wav, WRITELOCATION, 22050)
                 sd.wait()
                 integration.write_file("0", FLAGFILE)
         else:

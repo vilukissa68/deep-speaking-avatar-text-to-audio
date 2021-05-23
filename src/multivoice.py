@@ -163,3 +163,7 @@ def listSpeakers():
 
 def getNumberOfSpeakers():
     return len(VCTK_train_Speakers)
+
+def getSpeakerId(speaker):
+    return VCTK_train_Speakers[speaker];
+
