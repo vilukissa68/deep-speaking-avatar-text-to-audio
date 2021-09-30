@@ -52,6 +52,13 @@ def setup(args):
         if(i+1 < len(args)):
             global WRITELOCATION
             WRITELOCATION = args[i+1]
+            
+    if("-f" in args):
+        i = args.index("-f")
+        if(i+1 < len(args)):
+            global FLAGFILE
+            FLAGFILE = args[i+1]
+
 
     if("-r" in args):
         i = args.index("-r")
